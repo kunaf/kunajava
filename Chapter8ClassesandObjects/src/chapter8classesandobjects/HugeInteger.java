@@ -16,7 +16,7 @@ import java.util.Arrays;
  *
  * @author kuna
  */
-public class HugeInteger {
+public class HugeInteger extends Object{
     private static int[] array = new int[40];
     private int arrayIndex = 0;
     
@@ -71,4 +71,5 @@ public class HugeInteger {
             test = false;
         return test;
     }
+   
 }
