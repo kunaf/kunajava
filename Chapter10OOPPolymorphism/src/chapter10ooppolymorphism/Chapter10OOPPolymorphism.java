@@ -3,24 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package chapter9oopinheritance;
+package chapter10ooppolymorphism;
 
 /**
  *
  * @author kuna
  */
-public class SquareInheritsTests {
+public class Chapter10OOPPolymorphism {
 
-    
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Points point1 = new Points(0,0);
-        Points point2 = new Points(5,0);
-        Points point3 = new Points(5,5);
-        Points point4 = new Points(0,5);
-        
-        
-        
-        
+        // TODO code application logic here
     }
     
 }

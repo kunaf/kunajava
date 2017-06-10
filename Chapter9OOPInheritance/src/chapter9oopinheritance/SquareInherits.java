@@ -12,17 +12,19 @@ package chapter9oopinheritance;
 /**
  * @author kuna
  */
-public class SquareInherits extends QuadrilateralHierachy{
+public class SquareInherits extends RectangleInherits{
     
-    public SquareInherits(Points point1, Points point2, Points point3, Points point4) {
-        //call to superclass constructor
-        super(point1,point2,point3,point4);
+    //constuctor
+    SquareInherits(double x1, double y1, double x2, double y2, double x3, double y3, double x4, 
+            double y4, double height, double width) {
+        
+        //calling instance variables of super class
+        super(x1, y1, x2, y2, x3, y3, x4, y4, height, width);
     }
     
-    
-    
-    public int areaSquare(Points point3) {
-        int area = point3.multCoords(point3);
-        return area;
+    //to string method
+    @Override
+    public String toString() {
+        return String.format("%s%n%s%n", "Square", super.toString());
     }
 }

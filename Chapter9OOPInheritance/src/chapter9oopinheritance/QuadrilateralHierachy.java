@@ -16,16 +16,16 @@ package chapter9oopinheritance;
 public class QuadrilateralHierachy {
     //class points have composition relationship with class quadrilateral
     //instance variables 
-    private Points point1; // first point 
-    private Points point2; //second point
-    private Points point3; // third point
-    private Points point4; // four point
-    
-    public QuadrilateralHierachy(Points point1, Points point2, Points point3, Points point4) {
-        this.point1 = point1;
-        this.point2 = point2;
-        this.point3 = point3;
-        this.point4 = point4;
+    Points point1; // first point 
+    Points point2; //second point
+    Points point3; // third point
+    Points point4; // four point
+    //constructor
+    public QuadrilateralHierachy(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
+       Points point1 = new Points(x1, y1);
+       Points point2 = new Points(x2, y2);
+       Points point3 = new Points(x3, y3);
+       Points point4 = new Points(x4, y4);
     }
     //get method for point 1 of the quadrilateral
     public Points getPoint1() {
@@ -58,6 +58,12 @@ public class QuadrilateralHierachy {
     //set method for point 4 of the quadrilateral
     public void setPoint4(Points point4) {
         this.point1 = point4;
+    }
+    
+    //to string method
+    @Override
+    public String toString() {
+        return String.format("(%s, %s, %s, %s)", point1.toString(), point2.toString(), point3.toString(), point4.toString());
     }
     
     
