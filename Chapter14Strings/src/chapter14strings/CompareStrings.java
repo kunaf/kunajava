@@ -22,11 +22,12 @@ public class CompareStrings {
         System.out.println("Enter the second string: ");
         s2 = input.next();
         
+        //using the compare method 
         if((s1.compareTo(s2)) > (s2.compareTo(s1))) {
             System.out.printf("%s is greater than %s", s2, s1);
         }
         else
-            System.out.printf("%s is greater than %s", s1, s2);
+            System.out.printf("%s is greater than %s", s1, s2); 
         
     }
     
