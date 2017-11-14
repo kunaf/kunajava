@@ -6,18 +6,55 @@ Store the totals for each letter in an array, and print the values in tabular fo
 been determined.
  */
 package chapter14strings;
-
+import java.util.Scanner;
+import java.util.ArrayList;
 /**
- *
  * @author kuna
  */
 public class SearchString2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        ArrayList<Character> charac = new ArrayList<Character>();
+        
+        System.out.println("Enter a sentence: ");
+        String sentence = input.nextLine();
+                    
+       // char[] charac = {};
+
+        System.out.println("Character\t\t\t\t\tCount");
+        
+        for(int i = 0; i < sentence.length(); i++) {
+            int count = 0;
+            char c = sentence.charAt(i);
+            if(charac.contains(c) == false) {
+                 charac.add(c);
+                 // System.out.println(charac.length);
+                int index = sentence.indexOf(c);
+                if( i == 0 && index == 0) {
+                    //count +=1;
+                    //loop counts the occurences of c beggining after the seen occurence
+                    while(index>=0) {
+                        count += 1;
+                        index = sentence.indexOf(c, index+1);
+                    }
+                }
+                else {
+                    //loop counts the occurences of c beggining after the seen occurence
+                    while(index>0) {
+                        count += 1;
+                        index = sentence.indexOf(c, index+1);
+                    }
+                
+                }
+                
+                System.out.printf("%s\t\t\t\t\t%s", c, count);
+                System.out.println(""); 
+            }  
+            else
+                count = 0;
+ 
+        }
     }
     
 }
